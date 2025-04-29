@@ -1,6 +1,30 @@
-*.set
-*.isopen
-DO_Workshop/Binaries/
-DO_Workshop/Diagnosis/
-DO_Workshop/Temp/
 
+
+# gitignore template for B&R Automation Studio projects
+# website: https://www.br-automation.com/en/products/software/automation-software/automation-studio/
+
+# This file is meant to reside in the same path as the .apj file of a B&R project
+
+# Ignore /temp and /binaries as these contain only resulting binaries or build process files
+/Temp
+/Binaries
+
+# Ignore /Diagnosis as these contains diagnostic files such as watch window configurations that are user unique and not part of project code
+/Diagnosis
+
+# Ignore the /DLFiles/ directory found in any configurations SafeDESIGNER projects. These again are build process files that are unique based on who builds it
+/Physical/*/*/*/DLFiles/
+# Ignore Temporary Safety Debug Files, i.e. monitor mode/simulation files for SafeDESIGNER
+#/Physical/*/*/*/C/PLC/R/CPU/
+
+# Ignore AR versions as those are source code of the project
+/AS/System/
+
+# Ignore upgrades as those are not considered part of the project source code
+/Upgrades/
+
+# Ignore user settings file
+/*.set
+# Ignore is open indication
+/*.isopen
+>>>>>>> 34c3f45 (Updated Git Ignore File)
